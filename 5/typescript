@@ -1,0 +1,16 @@
+Script started on Thu Jan 16 11:52:17 2020
+[?1034hbash-3.2$ make clean
+rm *.hex *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+rm: *.ihx: No such file or directory
+rm: *.lnk: No such file or directory
+make: *** [clean] Error 1
+bash-3.2$ make
+sdcc -c  testparking.c
+testparking.c:161: warning 158: overflow in implicit constant conversion
+sdcc -c  preemptive.c
+preemptive.c:144: warning 85: in function ThreadCreate unreferenced function argument : 'fp'
+sdcc  -o testparking.hex testparking.rel preemptive.rel
+bash-3.2$ ex[Kxit
+exit
+
+Script done on Thu Jan 16 11:52:38 2020
